@@ -7,6 +7,31 @@
         mc:Ignorable="d"
         Title="Metroid Item Drop" Height="900" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <StackPanel>
-        
+
+        <Canvas Focusable="True" Name="canvas" KeyDown="canvasKeyDown">
+
+            <Image>
+                <Image.Source>
+
+                    <BitmapImage DecodePixelWidth="800" UriSource="imagenes\background.jpg"/>
+
+                </Image.Source>
+            </Image>
+
+            <Image Name="titulo" Canvas.Left="100" Canvas.Top="317">
+                
+                <Image.Source>
+
+                    <BitmapImage DecodePixelWidth="450" UriSource="\imagenes\titulo.png"/>
+
+                </Image.Source>
+                
+            </Image>
+
+            <Label Name="menuLabel" Foreground="White" FontSize="35" FontWeight="Bold" Canvas.Left="97" Canvas.Top="520">PRESIONA SPACE PARA COMENZAR</Label>
+
+        </Canvas>
+
     </StackPanel>
+
 </Window>

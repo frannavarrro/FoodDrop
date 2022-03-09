@@ -23,6 +23,18 @@ namespace FoodDrop
         public MainWindow()
         {
             InitializeComponent();
+
+            canvas.Focus();
+        }
+
+        private void canvasKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                titulo.Visibility = Visibility.Collapsed;
+
+                menuLabel.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

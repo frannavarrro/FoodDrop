@@ -8,7 +8,32 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="imagenes\" />
+    <None Remove="imagenes\background.jpg" />
+    <None Remove="imagenes\metroid.png" />
+    <None Remove="imagenes\metroide.png" />
+    <None Remove="imagenes\tanque.png" />
+    <None Remove="imagenes\titulo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="imagenes\metroide.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="imagenes\background.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="imagenes\metroid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="imagenes\tanque.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="imagenes\titulo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
