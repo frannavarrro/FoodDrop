@@ -19,16 +19,26 @@
             </Image>
 
             <Image Name="titulo" Canvas.Left="100" Canvas.Top="317">
-                
+
                 <Image.Source>
 
                     <BitmapImage DecodePixelWidth="450" UriSource="\imagenes\titulo.png"/>
 
                 </Image.Source>
-                
+
             </Image>
 
             <Label Name="menuLabel" Foreground="White" FontSize="35" FontWeight="Bold" Canvas.Left="97" Canvas.Top="520">PRESIONA SPACE PARA COMENZAR</Label>
+
+            <Image Name="jugador" Canvas.Left="348" Canvas.Top="726" Visibility="Collapsed">
+
+                <Image.Source>
+
+                    <BitmapImage DecodePixelWidth="100" UriSource="\imagenes\metroid.png"/>
+
+                </Image.Source>
+
+            </Image>
 
         </Canvas>
 
