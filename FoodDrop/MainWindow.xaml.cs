@@ -28,6 +28,8 @@ namespace FoodDrop
 
             corriendo = false;
 
+            datosJugador=new Jugador();
+
             canvas.Focus();
 
             mainLoopHandler = new DispatcherTimer();
@@ -47,19 +49,25 @@ namespace FoodDrop
 
                     jugador.Visibility = Visibility.Visible;
 
-                    corriendo = true;
-
                     mainLoopHandler.Start();
 
                 }
+            }
+
+            else if (corriendo)
+            {
+                if (e.Key == Key.Left) datosJugador.Direccion = 'L';
+
+                else if (e.Key == Key.Right) datosJugador.Direccion = 'R';
+
             }
         }
 
         private void mainLoop(object sender, EventArgs e)
         {
-            double inicio = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
+            if (!corriendo) corriendo = true;
 
-            procesarInput();
+            double inicio = DateTime.Now.Ticks / TimeSpan.TicksPerMillisecond;
 
             actualizar();
 
@@ -71,25 +79,21 @@ namespace FoodDrop
  
         }
 
-        private void procesarInput()
-        {
-
-        }
-
         private void actualizar()
         {
-
+            datosJugador.Moverse();
         }
 
         private void renderizar()
         {
-   
-            
+
+            Canvas.SetLeft(jugador, datosJugador.X);
         }
 
         private bool corriendo;
 
         private DispatcherTimer mainLoopHandler;
 
+        private Jugador datosJugador;
     }
 }
